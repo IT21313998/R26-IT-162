@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Milestones | R26-IT-162 Project Assessments</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- Top Info Bar -->
+  <div class="top-bar">
+    <div class="container">
+      <div class="top-info">
+        <span><i class="fas fa-university"></i> Sri Lanka Institute of Information Technology (SLIIT)</span>
+        <span><i class="fas fa-folder-open"></i> Project ID: R26-IT-162</span>
+      </div>
+      <div>
+        <span><i class="fas fa-calendar-alt"></i> Academic Year 2026</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Navbar -->
+  <nav class="navbar">
+    <div class="container">
+      <div class="brand">
+        <span class="brand-badge">CDAP</span>
+        <div class="brand-text">
+          <h2>R26-IT-162</h2>
+          <p>Project Milestones</p>
+        </div>
+      </div>
+      <button class="mobile-toggle" id="mobileToggle"><i class="fas fa-bars"></i></button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="domain.html"><i class="fas fa-book-open"></i> Domain</a></li>
+        <li><a href="milestones.html" class="active"><i class="fas fa-flag-checkered"></i> Milestones</a></li>
+        <li><a href="documents.html"><i class="fas fa-file-alt"></i> Documents</a></li>
+        <li><a href="presentations.html"><i class="fas fa-chalkboard-teacher"></i> Presentations</a></li>
+        <li><a href="about.html"><i class="fas fa-users"></i> About Us</a></li>
+        <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact Us</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <header class="hero" style="padding: 60px 0;">
+    <div class="container">
+      <div class="hero-content">
+        <span class="badge-tag"><i class="fas fa-calendar-check"></i> Slide 11: Assessment & Marks Allocation</span>
+        <h1>Project Milestones & <span>Timeline</span></h1>
+        <p class="hero-lead">
+          Comprehensive tracking of key academic assessments, dates, marks weightages, and completion status.
+        </p>
+      </div>
+    </div>
+  </header>
+
+  <!-- Filter / Dropdown Area (Slide 11 Requirement: "use a drop-down menu for user to choose") -->
+  <section class="section" style="padding: 40px 0 20px;">
+    <div class="container" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px;">
+      <div>
+        <h3 style="color: var(--secondary);">Assessment Timeline</h3>
+        <p style="color: var(--text-secondary); font-size: 0.9rem;">Filter milestones by academic progress status:</p>
+      </div>
+      <div style="display: flex; align-items: center; gap: 10px;">
+        <label for="milestoneFilter" style="font-weight: 600; font-size: 0.9rem;"><i class="fas fa-filter"></i> Filter Milestones:</label>
+        <select id="milestoneFilter" style="padding: 10px 16px; border-radius: 8px; border: 1px solid var(--border); background: white; font-weight: 600; cursor: pointer;">
+          <option value="all">Show All Milestones</option>
+          <option value="completed">Completed Milestones</option>
+          <option value="progress">In Progress</option>
+          <option value="pending">Upcoming / Pending</option>
+        </select>
+      </div>
+    </div>
+  </section>
+
+  <!-- Timeline Section -->
+  <section class="section" style="padding-top: 10px;">
+    <div class="container">
+      <div class="timeline">
+
+        <!-- 1. Proposal Submission & Presentation -->
+        <div class="timeline-item left" data-status="completed">
+          <div class="timeline-content">
+            <span class="timeline-badge badge-completed"><i class="fas fa-check"></i> Completed</span>
+            <span class="timeline-marks">6% of Total Marks</span>
+            <div class="timeline-date"><i class="far fa-calendar-alt"></i> 15th - 18th March 2026</div>
+            <h4 style="margin: 10px 0 6px; color: var(--secondary);">Proposal Submission & Defense</h4>
+            <p style="font-size: 0.9rem; color: var(--text-secondary);">
+              Proposal Report submitted on <strong>15th March 2026</strong>, followed by oral defense before the evaluation panel during <strong>16th – 18th March 2026</strong>.
+            </p>
+            <div style="margin-top: 12px;">
+              <a href="presentations.html" style="font-size: 0.85rem; font-weight: 600;"><i class="fas fa-file-powerpoint"></i> View Proposal Slides &rarr;</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. Check List Submission & PP1 -->
+        <div class="timeline-item right" data-status="completed">
+          <div class="timeline-content">
+            <span class="timeline-badge badge-completed"><i class="fas fa-check"></i> Completed</span>
+            <span class="timeline-marks">15% of Total Marks</span>
+            <div class="timeline-date"><i class="far fa-calendar-alt"></i> 11th - 13th May 2026</div>
+            <h4 style="margin: 10px 0 6px; color: var(--secondary);">Progress Presentation - 1 (PP1) & Check List</h4>
+            <p style="font-size: 0.9rem; color: var(--text-secondary);">
+              Check List submitted on <strong>13th May 2026</strong>. Evaluated on hardware prototype development, ESP32 ultrasonic rain sensor node, and data transmission.
+            </p>
+            <div style="margin-top: 12px;">
+              <a href="presentations.html" style="font-size: 0.85rem; font-weight: 600;"><i class="fas fa-file-powerpoint"></i> View PP1 Slides &rarr;</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. Progress Presentation 2 (PP2) -->
+        <div class="timeline-item left" data-status="completed">
+          <div class="timeline-content">
+            <span class="timeline-badge badge-completed"><i class="fas fa-check"></i> Completed</span>
+            <span class="timeline-marks">18% of Total Marks</span>
+            <div class="timeline-date"><i class="far fa-calendar-alt"></i> 31st August – 02nd September 2026</div>
+            <h4 style="margin: 10px 0 6px; color: var(--secondary);">Progress Presentation - 2 (PP2)</h4>
+            <p style="font-size: 0.9rem; color: var(--text-secondary);">
+              Demonstrated 50% core implementation: Multi-horizon ML prediction models (LightGBM/XGBoost), live Open-Meteo atmospheric API fusion, and DFRS risk scoring.
+            </p>
+          </div>
+        </div>
+
+        <!-- 4. Draft Thesis & Website Submission -->
+        <div class="timeline-item right" data-status="progress">
+          <div class="timeline-content">
+            <span class="timeline-badge badge-progress"><i class="fas fa-clock"></i> Active Phase</span>
+            <span class="timeline-marks">Mandatory Submissions</span>
+            <div class="timeline-date"><i class="far fa-calendar-alt"></i> 11th - 14th October 2026</div>
+            <h4 style="margin: 10px 0 6px; color: var(--secondary);">Draft Thesis & Website Upload</h4>
+            <p style="font-size: 0.9rem; color: var(--text-secondary);">
+              Draft Thesis submitted on <strong>11th October 2026</strong>. Academic project website source code uploaded to Course Web (max 20 MB). Final Check List submitted on <strong>14th October 2026</strong>.
+            </p>
+            <div style="margin-top: 12px;">
+              <a href="documents.html" style="font-size: 0.85rem; font-weight: 600;"><i class="fas fa-file-pdf"></i> Access Documents &rarr;</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5. Final Presentation, Viva & Website Evaluation -->
+        <div class="timeline-item left" data-status="pending">
+          <div class="timeline-content">
+            <span class="timeline-badge badge-pending"><i class="fas fa-calendar-day"></i> Crucial Milestone</span>
+            <span class="timeline-marks">Final Evaluation</span>
+            <div class="timeline-date"><i class="far fa-calendar-alt"></i> 19th – 21st October 2026</div>
+            <h4 style="margin: 10px 0 6px; color: var(--secondary);">Final Presentation, Viva & Website Evaluation</h4>
+            <p style="font-size: 0.9rem; color: var(--text-secondary);">
+              Live final defense and system demonstration before the examination panel. <strong>Mandatory submission of physical signed IT4010 logbook</strong> and academic website evaluation.
+            </p>
+          </div>
+        </div>
+
+        <!-- 6. Research Paper & Final Thesis -->
+        <div class="timeline-item right" data-status="pending">
+          <div class="timeline-content">
+            <span class="timeline-badge badge-pending"><i class="far fa-clock"></i> Final Deliverables</span>
+            <span class="timeline-marks">Graduation Clearance</span>
+            <div class="timeline-date"><i class="far fa-calendar-alt"></i> 23rd Oct – 1st Dec 2026</div>
+            <h4 style="margin: 10px 0 6px; color: var(--secondary);">Research Paper & Final Thesis</h4>
+            <p style="font-size: 0.9rem; color: var(--text-secondary);">
+              Research Paper Submission: <strong>23rd October 2026</strong><br>
+              Final Thesis Submission: <strong>28th October 2026</strong><br>
+              Research Paper Publication Evidence: <strong>1st December 2026</strong>
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Summary Table (Exact 2026 Regular Batch Timeline) -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-header">
+        <span class="tag">Official RP Schedule</span>
+        <h2>2026 Regular Batch — Timeline of the RP Project</h2>
+        <p>Official milestones, deadlines, and deliverables as prescribed by the SLIIT Research Project Team.</p>
+      </div>
+
+      <div class="card" style="overflow-x: auto; padding: 15px;">
+        <table style="width: 100%; border-collapse: collapse; text-align: left; font-size: 0.92rem;">
+          <thead>
+            <tr style="background: #0f172a; color: white;">
+              <th style="padding: 14px 18px;">Action / Milestone</th>
+              <th style="padding: 14px 18px;">Official Deadline</th>
+              <th style="padding: 14px 18px;">Deliverable Description</th>
+              <th style="padding: 14px 18px;">Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-bottom: 1px solid var(--border);">
+              <td style="padding: 12px 18px; font-weight: 600;">Proposal Submission</td>
+              <td style="padding: 12px 18px;">15th March 2026</td>
+              <td style="padding: 12px 18px;">Full Proposal Report (R26-IT-162)</td>
+              <td style="padding: 12px 18px;"><span class="timeline-badge badge-completed">&#10003; Completed</span></td>
+            </tr>
+            <tr style="border-bottom: 1px solid var(--border); background: #f8fafc;">
+              <td style="padding: 12px 18px; font-weight: 600;">Proposal Presentation</td>
+              <td style="padding: 12px 18px;">16th – 18th March 2026</td>
+              <td style="padding: 12px 18px;">Oral defense before evaluation panel</td>
+              <td style="padding: 12px 18px;"><span class="timeline-badge badge-completed">&#10003; Completed</span></td>
+            </tr>
+            <tr style="border-bottom: 1px solid var(--border);">
+              <td style="padding: 12px 18px; font-weight: 600;">Check List submission</td>
+              <td style="padding: 12px 18px;">13th May 2026</td>
+              <td style="padding: 12px 18px;">Supervisor-reviewed progress checklist</td>
+              <td style="padding: 12px 18px;"><span class="timeline-badge badge-completed">&#10003; Completed</span></td>
+            </tr>
+            <tr style="border-bottom: 1px solid var(--border); background: #f8fafc;">
+              <td style="padding: 12px 18px; font-weight: 600;">Progress Presentation 1 (PP1)</td>
+              <td style="padding: 12px 18px;">11th – 13th May 2026</td>
+              <td style="padding: 12px 18px;">IoT sensor prototype & basic transmission</td>
+              <td style="padding: 12px 18px;"><span class="timeline-badge badge-completed">&#10003; Completed</span></td>
+            </tr>
+            <tr style="border-bottom: 1px solid var(--border); background: #eff6ff;">
+              <td style="padding: 12px 18px; font-weight: 700; color: #1d4ed8;">Progress Presentation 2 (PP2)</td>
+              <td style="padding: 12px 18px; font-weight: 700; color: #1d4ed8;">31st August – 02nd September 2026</td>
+              <td style="padding: 12px 18px;">50% Core ML model & data fusion demo</td>
+              <td style="padding: 12px 18px;"><span class="timeline-badge badge-completed">&#10003; Completed</span></td>
+            </tr>
+            <tr style="border-bottom: 1px solid var(--border);">
+              <td style="padding: 12px 18px; font-weight: 600;">Draft Thesis submission</td>
+              <td style="padding: 12px 18px;">11th October 2026</td>
+              <td style="padding: 12px 18px;">Complete draft dissertation document</td>
+              <td style="padding: 12px 18px;"><span class="timeline-badge badge-progress">Submitted</span></td>
+            </tr>
+            <tr style="border-bottom: 1px solid var(--border); background: #f8fafc;">
+              <td style="padding: 12px 18px; font-weight: 600;">Website Submission</td>
+              <td style="padding: 12px 18px;">11th October 2026</td>
+              <td style="padding: 12px 18px;">Academic information website source code (≤ 20 MB)</td>
+              <td style="padding: 12px 18px;"><span class="timeline-badge badge-progress">Ready for Upload</span></td>
+            </tr>
+            <tr style="border-bottom: 1px solid var(--border);">
+              <td style="padding: 12px 18px; font-weight: 600;">Final Check List submission</td>
+              <td style="padding: 12px 18px;">14th October 2026</td>
+              <td style="padding: 12px 18px;">Endorsed final readiness check list</td>
+              <td style="padding: 12px 18px;"><span class="timeline-badge badge-progress">Completed</span></td>
+            </tr>
+            <tr style="border-bottom: 2px solid #2563eb; background: #fef2f2;">
+              <td style="padding: 14px 18px; font-weight: 800; color: #b91c1c;"><i class="fas fa-exclamation-circle"></i> Final Presentation and Viva</td>
+              <td style="padding: 14px 18px; font-weight: 800; color: #b91c1c;">19th – 21st October 2026</td>
+              <td style="padding: 14px 18px;">Oral defense of final product & findings</td>
+              <td style="padding: 14px 18px;"><span class="timeline-badge badge-pending">Active This Week</span></td>
+            </tr>
+            <tr style="border-bottom: 2px solid #2563eb; background: #fffbeb;">
+              <td style="padding: 14px 18px; font-weight: 800; color: #b45309;"><i class="fas fa-book-reader"></i> Website evaluation & Logbook submission</td>
+              <td style="padding: 14px 18px; font-weight: 800; color: #b45309;">19th – 21st October 2026</td>
+              <td style="padding: 14px 18px;">Website viva + Mandatory signed physical logbook</td>
+              <td style="padding: 14px 18px;"><span class="timeline-badge badge-pending">Active This Week</span></td>
+            </tr>
+            <tr style="border-bottom: 1px solid var(--border);">
+              <td style="padding: 12px 18px; font-weight: 600;">Research Paper submission</td>
+              <td style="padding: 12px 18px;">23rd October 2026</td>
+              <td style="padding: 12px 18px;">Camera-ready IEEE / conference paper draft</td>
+              <td style="padding: 12px 18px;"><span class="timeline-badge badge-pending">Upcoming</span></td>
+            </tr>
+            <tr style="border-bottom: 1px solid var(--border); background: #f8fafc;">
+              <td style="padding: 12px 18px; font-weight: 600;">Final Thesis Submission</td>
+              <td style="padding: 12px 18px;">28th October 2026</td>
+              <td style="padding: 12px 18px;">Hardbound/digital final research thesis</td>
+              <td style="padding: 12px 18px;"><span class="timeline-badge badge-pending">Upcoming</span></td>
+            </tr>
+            <tr>
+              <td style="padding: 12px 18px; font-weight: 600;">Research Paper publication evidence submission</td>
+              <td style="padding: 12px 18px;">1st December 2026</td>
+              <td style="padding: 12px 18px;">Conference/Journal acceptance or publication proof</td>
+              <td style="padding: 12px 18px;"><span class="timeline-badge badge-pending">Upcoming</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-brand">
+        <h3>R26-IT-162 Research Project</h3>
+        <p>An Intelligent IoT-Based Flood Early Warning and Water Level Prediction System for Kelani Riverine Communities in Sri Lanka.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="domain.html">Domain</a></li>
+          <li><a href="milestones.html">Milestones</a></li>
+          <li><a href="documents.html">Documents</a></li>
+          <li><a href="presentations.html">Presentations</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="documents.html">Documents</a></li>
+          <li><a href="presentations.html">Presentations</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 SLIIT CDAP Research Group R26-IT-162.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

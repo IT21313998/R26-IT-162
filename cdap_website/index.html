@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>R26-IT-162 | Intelligent IoT Flood Early Warning System</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- Top Info Bar -->
+  <div class="top-bar">
+    <div class="container">
+      <div class="top-info">
+        <span><i class="fas fa-university"></i> Sri Lanka Institute of Information Technology (SLIIT)</span>
+        <span><i class="fas fa-folder-open"></i> Project ID: R26-IT-162</span>
+        <span><i class="fas fa-tag"></i> Specialization: Information Technology</span>
+      </div>
+      <div>
+        <span><i class="fas fa-calendar-alt"></i> Academic Year 2026</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Navbar (Slide 8 Structure) -->
+  <nav class="navbar">
+    <div class="container">
+      <div class="brand">
+        <span class="brand-badge">CDAP</span>
+        <div class="brand-text">
+          <h2>R26-IT-162</h2>
+          <p>Kelani Flood Prediction</p>
+        </div>
+      </div>
+      <button class="mobile-toggle" id="mobileToggle">
+        <i class="fas fa-bars"></i>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" class="active"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="domain.html"><i class="fas fa-book-open"></i> Domain</a></li>
+        <li><a href="milestones.html"><i class="fas fa-flag-checkered"></i> Milestones</a></li>
+        <li><a href="documents.html"><i class="fas fa-file-alt"></i> Documents</a></li>
+        <li><a href="presentations.html"><i class="fas fa-chalkboard-teacher"></i> Presentations</a></li>
+        <li><a href="about.html"><i class="fas fa-users"></i> About Us</a></li>
+        <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact Us</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <div class="badge-tag">
+          <i class="fas fa-tint"></i> Research Cluster: TIM / CoEAI (SLIIT)
+        </div>
+        <h1>An Intelligent IoT-Based Flood Early Warning & <span>Water Level Prediction System</span></h1>
+        <p class="hero-lead">
+          Empowering Kelani Riverine Communities in Sri Lanka with Hyperlocal IoT Rainfall Sensing,
+          Multi-Horizon Machine Learning Forecasts (24h, 48h, 72h), and Distance-Based Dynamic Flood Risk Scoring.
+        </p>
+        <div class="hero-actions">
+          <a href="domain.html" class="btn btn-primary"><i class="fas fa-search"></i> Explore Research Domain</a>
+          <a href="documents.html" class="btn btn-outline"><i class="fas fa-download"></i> Project Documents</a>
+          <a href="milestones.html" class="btn btn-outline"><i class="fas fa-tasks"></i> View Milestones</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Project Abstract & Overview Section (Slide 9) -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-header">
+        <span class="tag">Executive Summary</span>
+        <h2>Project Overview & Abstract</h2>
+        <p>Addressing recurrent flood disasters in Sri Lanka's Kelani River Basin through localized technology.</p>
+      </div>
+
+      <div class="card" style="margin-bottom: 40px; border-left: 5px solid var(--primary);">
+        <h3 style="margin-bottom: 15px;"><i class="fas fa-quote-left" style="color: var(--primary); margin-right: 10px;"></i> Abstract</h3>
+        <p style="font-size: 1.05rem; line-height: 1.8; color: var(--text-primary);">
+          Flooding is a recurrent and devastating natural hazard in Sri Lanka. The catastrophic <strong>Cyclone Ditwah</strong> in November 2025 affected approximately <strong>2.2 million people</strong> across all 25 districts, resulting in 646 fatalities and displacing more than 165,000 residents. Despite advancements in meteorological forecasting, a critical gap remains in providing localized and actionable flood warnings to riverine communities.
+        </p>
+        <p style="font-size: 1.05rem; line-height: 1.8; color: var(--text-primary); margin-top: 15px;">
+          Current early warning systems rely primarily on manual river gauge readings and centralized bulletins distributed through television or SMS. These approaches suffer from low spatial resolution, delayed information dissemination, and limited public engagement. This research proposes an intelligent IoT-based flood early warning system that integrates <strong>hyperlocal rainfall monitoring with machine learning-based multi-horizon forecasting (Bi-LSTM, LightGBM, and XGBoost)</strong> and a <strong>Distance-Based Dynamic Flood Risk Scoring (DFRS)</strong> model.
+        </p>
+      </div>
+
+      <!-- Core Pillars Grid -->
+      <div class="grid-3">
+        <div class="card">
+          <div class="card-icon icon-blue">
+            <i class="fas fa-microchip"></i>
+          </div>
+          <h3>Hyperlocal IoT Sensing</h3>
+          <p>Solar-powered ESP32 nodes equipped with tipping bucket & ultrasonic rain gauges and SIM800L GPRS / LoRa telemetry to deliver minute-by-minute rainfall data.</p>
+        </div>
+
+        <div class="card">
+          <div class="card-icon icon-cyan">
+            <i class="fas fa-brain"></i>
+          </div>
+          <h3>Multi-Horizon ML Forecasting</h3>
+          <p>Gradient Boosting and Bi-LSTM models fused with atmospheric telemetry to accurately predict 24h, 48h, and 72h rainfall depths with >85% accuracy.</p>
+        </div>
+
+        <div class="card">
+          <div class="card-icon icon-green">
+            <i class="fas fa-broadcast-tower"></i>
+          </div>
+          <h3>Early Warning & DFRS</h3>
+          <p>Distance-Based Dynamic Flood Risk Scoring calculating personalized flood exposure and transmitting trilingual warnings (Sinhala, Tamil, English).</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- System Architecture & Workflow -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="tag">System Design</span>
+        <h2>End-to-End Architectural Flow</h2>
+        <p>Bridging field hardware, cloud message brokers, AI predictive models, and downstream flood warning consumers.</p>
+      </div>
+
+      <div class="grid-4">
+        <div class="card" style="text-align: center;">
+          <div style="font-size: 2rem; color: var(--primary); margin-bottom: 12px;"><i class="fas fa-satellite-dish"></i></div>
+          <h4>1. Field IoT Sensing</h4>
+          <p>ESP32 + Ultrasonic Rain Cup + GSM SIM800L sends real-time rainfall to EMQX MQTT broker.</p>
+        </div>
+        <div class="card" style="text-align: center;">
+          <div style="font-size: 2rem; color: var(--accent); margin-bottom: 12px;"><i class="fas fa-cloud-sun-rain"></i></div>
+          <h4>2. Atmospheric Fusion</h4>
+          <p>Open-Meteo live API pulls Kelani Basin barometric pressure, dew point, humidity, and wind vectors.</p>
+        </div>
+        <div class="card" style="text-align: center;">
+          <div style="font-size: 2rem; color: #8b5cf6; margin-bottom: 12px;"><i class="fas fa-network-wired"></i></div>
+          <h4>3. ML Inference Engine</h4>
+          <p>Trained LightGBM & Bi-LSTM predict rainfall depth (mm) for Day +1, Day +2, and Day +3 horizons.</p>
+        </div>
+        <div class="card" style="text-align: center;">
+          <div style="font-size: 2rem; color: var(--success); margin-bottom: 12px;"><i class="fas fa-bell"></i></div>
+          <h4>4. Partner DFRS & Alert</h4>
+          <p>FastAPI endpoint provides real-time inputs to Student B's Water Level & Flood Risk model.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quick Links Section -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="grid-2">
+        <div class="card" style="background: linear-gradient(135deg, #0d1b2a 0%, #1c2541 100%); color: white;">
+          <h3 style="color: white; margin-bottom: 12px;"><i class="fas fa-bullseye" style="color: var(--accent);"></i> Project Alignment</h3>
+          <p style="color: #cbd5e1; margin-bottom: 20px;">
+            Supporting the United Nations Sustainable Development Goals (SDG):
+          </p>
+          <ul style="list-style: none; padding: 0;">
+            <li style="margin-bottom: 10px;"><i class="fas fa-check-circle" style="color: #38bdf8; margin-right: 8px;"></i> <strong>SDG 11:</strong> Sustainable Cities and Communities</li>
+            <li style="margin-bottom: 10px;"><i class="fas fa-check-circle" style="color: #38bdf8; margin-right: 8px;"></i> <strong>SDG 13:</strong> Climate Action and Disaster Preparedness</li>
+            <li style="margin-bottom: 10px;"><i class="fas fa-check-circle" style="color: #38bdf8; margin-right: 8px;"></i> <strong>SDG 1:</strong> No Poverty (Protecting livelihood & property)</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3><i class="fas fa-user-graduate" style="color: var(--primary); margin-right: 8px;"></i> Research Team</h3>
+          <div style="margin-top: 15px;">
+            <p><strong>Student A:</strong> Rasara S.H.K (IT21313998)</p>
+            <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 12px;">Component: Hyperlocal IoT Rainfall Monitoring + Multi-Horizon ML Forecasting</p>
+            
+            <p><strong>Student B:</strong> U.H.K Sankalana (IT22236814)</p>
+            <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 15px;">Component: Distance-Based Dynamic Flood Risk Scoring (DFRS) & Water Level Prediction</p>
+            
+            <hr style="border: none; border-top: 1px solid var(--border); margin: 15px 0;">
+            <p><strong>Supervisor:</strong> Ms. Tharushi Rubasinghe</p>
+            <p><strong>Co-Supervisor:</strong> Ms. Sameeri Subasinghe</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-brand">
+        <h3>R26-IT-162 Research Project</h3>
+        <p>An Intelligent IoT-Based Flood Early Warning and Water Level Prediction System for Kelani Riverine Communities in Sri Lanka.</p>
+        <p style="margin-top: 10px; font-size: 0.8rem; color: #64748b;">Department of Information Technology, Faculty of Computing, SLIIT.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="domain.html">Domain</a></li>
+          <li><a href="milestones.html">Milestones</a></li>
+          <li><a href="documents.html">Documents</a></li>
+          <li><a href="presentations.html">Presentations</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Key Resources</h4>
+        <ul>
+          <li><a href="documents.html">Project Charter</a></li>
+          <li><a href="documents.html">Proposal Report</a></li>
+          <li><a href="presentations.html">Proposal Slides</a></li>
+          <li><a href="http://cdap.sliit.lk/" target="_blank">SLIIT CDAP Portal</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 SLIIT CDAP Research Group R26-IT-162. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

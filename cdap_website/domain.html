@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Domain | R26-IT-162 Flood Early Warning System</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- Top Info Bar -->
+  <div class="top-bar">
+    <div class="container">
+      <div class="top-info">
+        <span><i class="fas fa-university"></i> Sri Lanka Institute of Information Technology (SLIIT)</span>
+        <span><i class="fas fa-folder-open"></i> Project ID: R26-IT-162</span>
+      </div>
+      <div>
+        <span><i class="fas fa-calendar-alt"></i> Academic Year 2026</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Navbar -->
+  <nav class="navbar">
+    <div class="container">
+      <div class="brand">
+        <span class="brand-badge">CDAP</span>
+        <div class="brand-text">
+          <h2>R26-IT-162</h2>
+          <p>Research Domain</p>
+        </div>
+      </div>
+      <button class="mobile-toggle" id="mobileToggle"><i class="fas fa-bars"></i></button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="domain.html" class="active"><i class="fas fa-book-open"></i> Domain</a></li>
+        <li><a href="milestones.html"><i class="fas fa-flag-checkered"></i> Milestones</a></li>
+        <li><a href="documents.html"><i class="fas fa-file-alt"></i> Documents</a></li>
+        <li><a href="presentations.html"><i class="fas fa-chalkboard-teacher"></i> Presentations</a></li>
+        <li><a href="about.html"><i class="fas fa-users"></i> About Us</a></li>
+        <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact Us</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <header class="hero" style="padding: 60px 0;">
+    <div class="container">
+      <div class="hero-content">
+        <span class="badge-tag"><i class="fas fa-microscope"></i> Slide 10: Academic Research Domain</span>
+        <h1>Research Domain & <span>Methodology</span></h1>
+        <p class="hero-lead">
+          Detailed literature survey, identified research gaps, formal research problem, primary objectives, and technological framework.
+        </p>
+      </div>
+    </div>
+  </header>
+
+  <!-- Domain Content Section (Slide 10 Criteria) -->
+  <section class="section">
+    <div class="container">
+
+      <!-- 1. Literature Survey -->
+      <div class="card" style="margin-bottom: 35px;">
+        <div class="card-icon icon-blue"><i class="fas fa-book-reader"></i></div>
+        <h3>1. Literature Survey</h3>
+        <p style="margin-bottom: 15px;">
+          Flooding along the lower Kelani River basin is driven by intense rainfall in the central highlands and steep runoff characteristics. In Sri Lanka, current flood forecasting systems operated by the Department of Meteorology and the Irrigation Department utilize numerical hydrological models (e.g., HEC-HMS) calibrated on historical catchment data.
+        </p>
+        <p style="margin-bottom: 15px;">
+          However, existing literature confirms two persistent limitations:
+        </p>
+        <ul style="padding-left: 20px; color: var(--text-secondary); margin-bottom: 15px;">
+          <li style="margin-bottom: 8px;"><strong>Sparse Physical Gauging:</strong> Rain gauge stations are spaced tens of kilometers apart, failing to capture localized cloudburst events and high-intensity rainfall pockets across sub-catchments.</li>
+          <li style="margin-bottom: 8px;"><strong>Delayed Dissemination:</strong> Bulletins published via television broadcasts and SMS broadcasts lack dynamic spatial resolution, offering coarse provincial warnings rather than street-level actionable warnings.</li>
+        </ul>
+        <p>
+          Recent advances in edge IoT microcontrollers (ESP32) and deep recurrent neural networks (LSTM, Bi-LSTM) offer a breakthrough for real-time hydrological time-series modeling with exogenous atmospheric variables.
+        </p>
+      </div>
+
+      <!-- 2. Research Gap & Problem -->
+      <div class="grid-2" style="margin-bottom: 35px;">
+        <div class="card" style="border-top: 4px solid #f59e0b;">
+          <div class="card-icon icon-orange"><i class="fas fa-exclamation-triangle"></i></div>
+          <h3>2. Research Gap</h3>
+          <p>
+            While satellite-based rainfall estimates and centralized river gauge models exist independently, there is a distinct absence of an <strong>integrated, low-cost hyperlocal IoT sensing network paired with real-time multi-horizon machine learning models (24h, 48h, 72h)</strong> calibrated specifically for Sri Lankan river basins with automated upstream-downstream data fusion.
+          </p>
+        </div>
+
+        <div class="card" style="border-top: 4px solid #ef4444;">
+          <div class="card-icon icon-cyan" style="color: #ef4444; background: rgba(239, 68, 68, 0.1);"><i class="fas fa-fire-extinguisher"></i></div>
+          <h3>3. Research Problem</h3>
+          <p>
+            <em>"How can a distributed network of low-cost IoT rainfall sensors and multi-variable atmospheric telemetry be fused with deep learning regression models to provide accurate, multi-horizon river water level predictions and distance-based dynamic flood risk warnings to vulnerable Kelani Riverine communities?"</em>
+          </p>
+        </div>
+      </div>
+
+      <!-- 3. Research Objectives -->
+      <div class="card" style="margin-bottom: 35px;">
+        <div class="card-icon icon-green"><i class="fas fa-bullseye"></i></div>
+        <h3>4. Research Objectives</h3>
+        <div class="grid-2" style="margin-top: 20px;">
+          <div style="background: #f8fafc; padding: 20px; border-radius: 8px; border-left: 4px solid var(--primary);">
+            <h4 style="color: var(--secondary); margin-bottom: 8px;">General Objective</h4>
+            <p style="font-size: 0.95rem;">To design, develop, deploy, and evaluate an intelligent IoT-based flood early warning and water level prediction system that delivers hyperlocal 1-to-3 day ahead forecasts to Kelani riverine communities.</p>
+          </div>
+          <div style="background: #f8fafc; padding: 20px; border-radius: 8px; border-left: 4px solid var(--success);">
+            <h4 style="color: var(--secondary); margin-bottom: 8px;">Specific Objectives</h4>
+            <ul style="padding-left: 18px; font-size: 0.9rem; color: var(--text-secondary);">
+              <li style="margin-bottom: 6px;">Develop solar-powered ESP32 nodes measuring rainfall depth (±3% accuracy).</li>
+              <li style="margin-bottom: 6px;">Ingest atmospheric variables (pressure tendencies, dew point) via Open-Meteo API.</li>
+              <li style="margin-bottom: 6px;">Train and benchmark Bi-LSTM, LightGBM, and Random Forest models achieving >85% accuracy.</li>
+              <li style="margin-bottom: 6px;">Formulate Distance-Based Dynamic Flood Risk Scoring (DFRS) and trilingual warnings.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4. Methodology -->
+      <div class="card" style="margin-bottom: 35px;">
+        <div class="card-icon icon-blue"><i class="fas fa-cogs"></i></div>
+        <h3>5. Methodology</h3>
+        <p style="margin-bottom: 20px;">The research adopts an iterative experimental design methodology spanning 5 phased stages:</p>
+        <div class="grid-3">
+          <div style="padding: 16px; background: #f8fafc; border-radius: 8px;">
+            <strong style="color: var(--primary);">Phase 1: Data Collection & Hardware</strong>
+            <p style="font-size: 0.88rem; margin-top: 8px;">Designing ESP32 firmware with tipping bucket interrupts, SIM800L GPRS telemetry, and sourcing 3.65 years (31,992 hourly samples) of Kelani climate data.</p>
+          </div>
+          <div style="padding: 16px; background: #f8fafc; border-radius: 8px;">
+            <strong style="color: var(--primary);">Phase 2: Feature Engineering & ML</strong>
+            <p style="font-size: 0.88rem; margin-top: 8px;">Extracting Magnus dew point depression, vapor pressure deficit, multi-scale rolling lag aggregations (1h to 72h), and cyclical time features.</p>
+          </div>
+          <div style="padding: 16px; background: #f8fafc; border-radius: 8px;">
+            <strong style="color: var(--primary);">Phase 3: Integration & Evaluation</strong>
+            <p style="font-size: 0.88rem; margin-top: 8px;">Deploying REST APIs (FastAPI) and interactive Streamlit live dashboards with automated fallback mechanisms and trilingual emergency alerting.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 5. Technologies Used -->
+      <div class="card">
+        <div class="card-icon icon-cyan"><i class="fas fa-laptop-code"></i></div>
+        <h3>6. Technologies & Tools Used</h3>
+        <div class="grid-4" style="margin-top: 20px; text-align: center;">
+          <div style="padding: 15px; background: #f8fafc; border-radius: 8px;">
+            <i class="fab fa-python" style="font-size: 2.2rem; color: #3b82f6; margin-bottom: 8px;"></i>
+            <h5>Python & Scikit-Learn</h5>
+            <p style="font-size: 0.8rem; color: var(--text-secondary);">LightGBM, XGBoost, Pandas, Joblib</p>
+          </div>
+          <div style="padding: 15px; background: #f8fafc; border-radius: 8px;">
+            <i class="fas fa-microchip" style="font-size: 2.2rem; color: #10b981; margin-bottom: 8px;"></i>
+            <h5>ESP32 & C++</h5>
+            <p style="font-size: 0.8rem; color: var(--text-secondary);">SIM800L GPRS, Ultrasonic, FreeRTOS</p>
+          </div>
+          <div style="padding: 15px; background: #f8fafc; border-radius: 8px;">
+            <i class="fas fa-network-wired" style="font-size: 2.2rem; color: #f59e0b; margin-bottom: 8px;"></i>
+            <h5>EMQX / HiveMQ</h5>
+            <p style="font-size: 0.8rem; color: var(--text-secondary);">MQTT Protocol, JSON Payloads</p>
+          </div>
+          <div style="padding: 15px; background: #f8fafc; border-radius: 8px;">
+            <i class="fas fa-chart-line" style="font-size: 2.2rem; color: #ef4444; margin-bottom: 8px;"></i>
+            <h5>Streamlit & FastAPI</h5>
+            <p style="font-size: 0.8rem; color: var(--text-secondary);">Interactive Dashboard & REST Endpoint</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-brand">
+        <h3>R26-IT-162 Research Project</h3>
+        <p>An Intelligent IoT-Based Flood Early Warning and Water Level Prediction System for Kelani Riverine Communities in Sri Lanka.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="domain.html">Domain</a></li>
+          <li><a href="milestones.html">Milestones</a></li>
+          <li><a href="documents.html">Documents</a></li>
+          <li><a href="presentations.html">Presentations</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="documents.html">Proposal Document</a></li>
+          <li><a href="presentations.html">Presentations</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 SLIIT CDAP Research Group R26-IT-162.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
