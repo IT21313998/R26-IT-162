@@ -27,6 +27,7 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 from live_weather_api import LiveWeatherAPI
 from fusion_engine import RealTimeDataFusionEngine
+from integration_bridge import PartnerFloodRiskPredictor
 
 # Page configuration
 st.set_page_config(
@@ -72,7 +73,12 @@ def get_fusion_engine():
     csv_path = os.path.join(os.path.dirname(__file__), '..', 'open-meteo-6.99N79.90E8m (1).csv')
     return RealTimeDataFusionEngine(model_bundle_path=model_path, historical_csv_path=csv_path)
 
+@st.cache_resource
+def get_partner_predictor():
+    return PartnerFloodRiskPredictor()
+
 engine = get_fusion_engine()
+partner_predictor = get_partner_predictor()
 
 # Sidebar: Configuration & Status
 with st.sidebar:
@@ -319,26 +325,87 @@ with tab2:
 
 
 # =========================================================================
-# TAB 3: Student B Partner API Integration
+# TAB 3: Student B Partner API Integration & Live Flood Risk Handoff
 # =========================================================================
 with tab3:
-    st.subheader("🤝 Student B (Partner) Model Handoff & REST API Interface")
+    st.subheader("🤝 End-to-End System Integration: Rainfall Forecast ➔ Dynamic Flood Risk (DFRS)")
     st.markdown("""
-    This screen displays the **exact standardized JSON payload** consumed by Student B's
-    **Distance-Based Dynamic Flood Risk Scoring (DFRS) and Water Level Model**.
+    This panel demonstrates the **seamless handoff** between **Student A (IoT Rainfall & Weather Forecast)** 
+    and **Student B (Distance-Based Dynamic Flood Risk & Water Level Prediction)**.
     """)
 
-    st.code("GET http://localhost:8000/api/v1/forecast/latest", language="http")
-    
-    st.json(latest_payload)
-    
-    st.markdown("#### 📋 Field Mapping for Student B:")
-    st.markdown("""
-    - `forecast_24h_mm`: Cumulative rain in next 24 hours (used in water level rise rate equation).
-    - `forecast_48h_mm`: Cumulative rain in 25–48 hours (used in medium-term flood forecast).
-    - `forecast_72h_mm`: Cumulative rain in 49–72 hours (used for 3-day evacuation lead-time planning).
-    - `basin_alert_level`: Authoritative alert category (`NORMAL`, `ALERT_WATCH`, `MINOR_FLOOD_ALERT`, `MAJOR_FLOOD_WARNING`).
-    """)
+    b_col1, b_col2 = st.columns([1, 1])
+
+    with b_col1:
+        st.markdown("#### 📍 Community Geospatial Parameters (Kelani Basin)")
+        b_district = st.selectbox("District", ["Colombo", "Gampaha"], index=0)
+        b_dist_river = st.slider("Distance to Kelani River (meters)", 50.0, 2500.0, 450.0, 50.0)
+        b_elevation = st.slider("Elevation above sea level (meters)", 2.0, 45.0, 11.5, 0.5)
+        b_landcover = st.selectbox("Landcover Type", ["Urban", "Vegetation", "Bareland", "Waterbody"], index=0)
+        b_soil = st.selectbox("Soil Type", ["Clay", "Sandy", "Loam", "Peat"], index=0)
+        b_flow_rate = st.slider("Upstream River Flow Rate (m³/s)", 300.0, 3200.0, 1450.0, 50.0)
+        b_hist_floods = st.slider("Historical Flood Frequency (Past 10 Years)", 0, 15, 6)
+
+        geo_params = {
+            "district": b_district,
+            "latitude": 6.9365 if b_district == "Colombo" else 7.0840,
+            "longitude": 79.9834 if b_district == "Colombo" else 80.0098,
+            "elevation_m": b_elevation,
+            "distance_to_river_m": b_dist_river,
+            "landcover": b_landcover,
+            "soil_type": b_soil,
+            "historical_flood_count": float(b_hist_floods),
+            "river_flow_rate_m3s": b_flow_rate
+        }
+
+    with b_col2:
+        st.markdown("#### 🌊 Live Integrated Prediction Result (Student B Model)")
+        
+        # Execute integration bridge using Student A's live/simulated forecast
+        integrated_output = partner_predictor.predict_from_student_a_forecast(
+            student_a_payload=latest_payload,
+            location_params=geo_params
+        )
+        preds = integrated_output["partner_predictions"]
+
+        # Stage 1 Metrics
+        st.markdown("##### 🎯 Stage 1: Flood Occurrence & Risk Score (0–100)")
+        res1, res2, res3 = st.columns(3)
+        with res1:
+            st.metric("Flood Occurrence", preds["flood_occurrence"], delta="Binary Classifier")
+        with res2:
+            st.metric("Flood Probability", f"{preds['flood_probability']*100:.1f} %", delta="Sigmoid Confidence")
+        with res3:
+            st.metric("Risk Score", f"{preds['flood_risk_score']:.1f} / 100", delta=preds["risk_category"])
+
+        st.progress(min(1.0, preds["flood_risk_score"] / 100.0))
+
+        # Risk Banner
+        if preds["risk_category"] == "Very High":
+            st.error(f"🔴 **CRITICAL RISK ALERT**: Score {preds['flood_risk_score']:.1f} — Immediate community evacuation advised!")
+        elif preds["risk_category"] == "High":
+            st.warning(f"🟠 **HIGH FLOOD RISK**: Score {preds['flood_risk_score']:.1f} — Riverbank overtopping probable.")
+        elif preds["risk_category"] == "Moderate":
+            st.info(f"🟡 **MODERATE RISK**: Score {preds['flood_risk_score']:.1f} — Standby for advisory updates.")
+        else:
+            st.success(f"🟢 **LOW RISK**: Score {preds['flood_risk_score']:.1f} — Normal river discharge.")
+
+        # Stage 2 Metrics (Hydrological Inundation)
+        st.markdown("##### ⏱️ Stage 2: Inundation Dynamics (Time & Water Height)")
+        if preds["arrival_time_hrs"] is not None and preds["water_height_m"] is not None:
+            hyd1, hyd2 = st.columns(2)
+            with hyd1:
+                st.metric("Predicted Arrival Lead-Time", f"{preds['arrival_time_hrs']:.1f} Hours", delta="Evacuation Window")
+            with hyd2:
+                st.metric("Predicted Inundation Height", f"{preds['water_height_m']:.2f} Meters", delta="Ground Water Level")
+        else:
+            st.caption("ℹ️ *Stage 2 Arrival Time and Water Height models activate when Flood Occurrence = Yes.*")
+
+    st.divider()
+    st.markdown("#### 📡 Real-Time REST API Handoff Payload (Student A ➔ Student B)")
+    st.code("GET http://localhost:8000/api/v1/forecast/latest  ➔  POST http://localhost:5000/api/predict", language="bash")
+    with st.expander("🔍 Click to inspect complete JSON payload delivered across components:"):
+        st.json(integrated_output)
 
 
 # =========================================================================

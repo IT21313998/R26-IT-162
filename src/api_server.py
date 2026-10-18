@@ -108,7 +108,28 @@ def create_app():
         """
         return fusion_engine.weather_api.fetch_current_weather(force_refresh=True)
 
+    @app.post("/api/v1/integrated/flood-risk")
+    def compute_integrated_flood_risk(community_params: Optional[Dict[str, Any]] = None):
+        """
+        Integrated End-to-End Pipeline Endpoint:
+        Takes latest multi-horizon rainfall forecasts from Student A, fuses with
+        community spatial parameters, and executes Student B's Two-Stage XGBoost
+        models to return Flood Probability, Risk Score, Arrival Time, and Water Height.
+        """
+        from integration_bridge import PartnerFloodRiskPredictor
+        predictor = PartnerFloodRiskPredictor()
+        
+        latest_fc = fusion_engine.get_latest_forecast()
+        if not latest_fc:
+            latest_fc = fusion_engine.process_incoming_iot_packet({"rain": 0.0})
+            
+        return predictor.predict_from_student_a_forecast(
+            student_a_payload=latest_fc,
+            location_params=community_params
+        )
+
     return app
+
 
 
 # CLI runner
