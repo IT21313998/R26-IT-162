@@ -9,3 +9,5 @@ export const getOptions = () => api.get('/api/options');
 export const predict = (payload) => api.post('/api/predict', payload);
 
 export const healthCheck = () => api.get('/api/health');
+
+export const fetchStudentAForecast = () => api.get('/api/fetch-student-a-forecast');

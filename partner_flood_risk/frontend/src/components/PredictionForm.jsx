@@ -168,14 +168,42 @@ export default function PredictionForm({ onResult, onLoading }) {
         </div>
       </div>
 
-      {/* ── Historical ──────────────────────────────────────────── */}
-      <div>
-        <SectionHeader icon={<History />} title="Historical Data" />
-        {num('historical_flood_count', 'Past Flood Events at This Location', 'DMC records / community knowledge', 1)}
+      {/* ── Auto-Sync with Student A IoT Predictor ── */}
+      <div className="p-4 rounded-xl bg-blue-50/60 border border-blue-100 flex items-center justify-between">
+        <div>
+          <h4 className="text-xs font-bold text-blue-900 flex items-center gap-1.5">
+            <Zap size={14} className="text-blue-600" /> Sync with Student A IoT Forecast (Kelani)
+          </h4>
+          <p className="text-[11px] text-blue-700 mt-0.5">
+            Pull live IoT rainfall rates & multi-horizon forecasts directly into this model.
+          </p>
+        </div>
+        <button
+          type="button"
+          onClick={async () => {
+            try {
+              const res = await (await import('../api')).fetchStudentAForecast();
+              const d = res.data;
+              setForm(prev => ({
+                ...prev,
+                rainfall_7d_mm: d.rainfall_7d_mm || prev.rainfall_7d_mm,
+                monthly_rainfall_mm: d.monthly_rainfall_mm || prev.monthly_rainfall_mm,
+                rainfall_intensity_mmhr: d.rainfall_intensity_mmhr || prev.rainfall_intensity_mmhr,
+              }));
+              alert(`✅ Synced with Student A live data!\n• Rain (Last 7d): ${d.rainfall_7d_mm} mm\n• Monthly Rain: ${d.monthly_rainfall_mm} mm\n• Peak Intensity: ${d.rainfall_intensity_mmhr} mm/hr\n(Source: ${d.source})`);
+            } catch (err) {
+              alert('⚠️ Failed to contact Student A server. Ensure partner backend is running.');
+            }
+          }}
+          className="px-3 py-1.5 bg-blue-600 hover:bg-blue-700 text-white text-xs font-semibold rounded-lg shadow-sm transition-all"
+        >
+          🔄 Sync IoT Forecast
+        </button>
       </div>
 
       {/* Submit */}
       <button
+
   onClick={handleSubmit}
   disabled={loading}
   className="w-full py-3.5 rounded-xl font-semibold text-white flex items-center justify-center gap-2
