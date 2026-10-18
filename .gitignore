@@ -48,3 +48,18 @@ cdap_website_submission.zip
 # Large Model / Weights binaries (keep placeholder or Git LFS)
 *.tar.gz
 *.zip
+
+# Node & Frontend dependencies
+node_modules/
+**/node_modules/**
+dist/
+.vite/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Ignore redundant raw dump folder
+flood risk sliit  R/
+final/
+generate_notebook.py
+
