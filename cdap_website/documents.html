@@ -58,64 +58,118 @@
     </div>
   </header>
 
-  <!-- Document Sections (Strictly 5 Official Folders) -->
+  <!-- Document Sections (Strictly 5 Official Folders with Sub-Folders) -->
   <section class="section">
     <div class="container">
 
       <!-- ======================================================== -->
-      <!-- 1. PROJECT PROPOSAL -->
+      <!-- 1. PROJECT PROPOSAL (Split into 2 Sub-Folders) -->
       <!-- ======================================================== -->
-      <div style="margin-bottom: 45px;">
-        <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 20px; border-bottom: 2px solid var(--border); padding-bottom: 10px;">
-          <div style="background: #e0f2fe; color: #0284c7; width: 42px; height: 42px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; font-weight: bold;">
-            <i class="fas fa-folder"></i>
+      <div style="margin-bottom: 45px; background: white; border-radius: var(--radius); padding: 24px; box-shadow: var(--shadow); border: 1px solid var(--border);">
+        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px; border-bottom: 2px solid var(--border); padding-bottom: 12px; flex-wrap: wrap; gap: 10px;">
+          <div style="display: flex; align-items: center; gap: 12px;">
+            <div style="background: #e0f2fe; color: #0284c7; width: 44px; height: 44px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 1.3rem;">
+              <i class="fas fa-folder-open"></i>
+            </div>
+            <div>
+              <h3 style="color: var(--secondary); margin: 0; font-size: 1.35rem; display: flex; align-items: center; gap: 8px;">
+                1. Project Proposal
+                <span style="font-size: 0.75rem; background: #e0f2fe; color: #0369a1; padding: 2px 8px; border-radius: 12px; font-weight: 600;">2 Sub-Folders</span>
+              </h3>
+              <p style="margin: 0; color: var(--text-secondary); font-size: 0.85rem;">Initial project registration, scope definition charter, and formal research proposal deliverables.</p>
+            </div>
           </div>
-          <div>
-            <h3 style="color: var(--secondary); margin: 0; font-size: 1.3rem;">1. Project Proposal</h3>
-            <p style="margin: 0; color: var(--text-secondary); font-size: 0.85rem;">Initial project registration, scope definition charter, and formal research proposal report.</p>
+          <span class="timeline-badge badge-completed"><i class="fas fa-check-circle"></i> Milestone Completed</span>
+        </div>
+
+        <!-- Sub-Folder 1.1: Individual Reports -->
+        <div style="margin-bottom: 22px; background: #f8fafc; border: 1px dashed #cbd5e1; border-radius: 10px; padding: 18px;">
+          <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 14px;">
+            <i class="fas fa-folder" style="color: #0284c7; font-size: 1.1rem;"></i>
+            <h4 style="margin: 0; font-size: 1.05rem; color: #0f172a;">📂 Sub-Folder: Individual Reports</h4>
+            <span style="font-size: 0.75rem; color: var(--text-secondary);">(Reports & Charter)</span>
+          </div>
+
+          <div style="display: flex; flex-direction: column; gap: 12px; padding-left: 10px; border-left: 2px solid #e2e8f0;">
+            <!-- Proposal Report IT21313998 -->
+            <div class="doc-card" style="margin-bottom: 0; background: white;">
+              <div class="doc-info">
+                <div class="doc-icon"><i class="fas fa-file-pdf"></i></div>
+                <div class="doc-details">
+                  <h4>Proposal Report — IT21313998 (Rasara S.H.K)</h4>
+                  <p>Individual research proposal: IoT-enabled microclimate rainfall sensing, ESP32 edge debouncing, and multi-horizon LightGBM predictive modeling.</p>
+                </div>
+              </div>
+              <div>
+                <a href="docs/Proposal_Report_IT21313998.pdf" target="_blank" class="btn btn-primary"><i class="fas fa-file-pdf"></i> View Proposal (PDF)</a>
+              </div>
+            </div>
+
+            <!-- Proposal Report IT22236814 -->
+            <div class="doc-card" style="margin-bottom: 0; background: white;">
+              <div class="doc-info">
+                <div class="doc-icon" style="color: #0284c7;"><i class="fas fa-file-pdf"></i></div>
+                <div class="doc-details">
+                  <h4>Proposal Report — IT22236814 (Sankalana U.H.K)</h4>
+                  <p>Individual research proposal: Hydrological water level modeling, Two-Stage XGBoost inundation prediction, and DFRS risk quantification.</p>
+                </div>
+              </div>
+              <div>
+                <a href="docs/Proposal_Report_IT22236814.pdf" target="_blank" class="btn btn-primary"><i class="fas fa-file-pdf"></i> View Proposal (PDF)</a>
+              </div>
+            </div>
+
+            <!-- Project Proposal Brief -->
+            <div class="doc-card" style="margin-bottom: 0; background: white;">
+              <div class="doc-info">
+                <div class="doc-icon" style="color: #0284c7;"><i class="fas fa-file-alt"></i></div>
+                <div class="doc-details">
+                  <h4>Official Project Registration Brief</h4>
+                  <p>Endorsed project brief submitted to SLIIT academic coordinators containing team specialization roles and research scope.</p>
+                </div>
+              </div>
+              <div>
+                <a href="docs/Project_Proposal_Brief_R26_IT_162.pdf" target="_blank" class="btn btn-outline" style="background: var(--primary); color: white; border: none;"><i class="fas fa-eye"></i> View Brief (PDF)</a>
+              </div>
+            </div>
+
+            <!-- Project Charter -->
+            <div class="doc-card" style="margin-bottom: 0; background: white;">
+              <div class="doc-info">
+                <div class="doc-icon" style="color: #6366f1;"><i class="fas fa-certificate"></i></div>
+                <div class="doc-details">
+                  <h4>Project Charter (R26-IT-162)</h4>
+                  <p>Formal project charter defining research milestones, deliverables, resource agreements, and supervisor governance structure.</p>
+                </div>
+              </div>
+              <div>
+                <a href="docs/Project_Charter_R26_IT_162.pdf" target="_blank" class="btn btn-outline" style="background: #6366f1; color: white; border: none;"><i class="fas fa-eye"></i> View Charter (PDF)</a>
+              </div>
+            </div>
           </div>
         </div>
 
-        <div style="display: flex; flex-direction: column; gap: 15px;">
-          <!-- Proposal Report -->
-          <div class="doc-card" style="margin-bottom: 0;">
-            <div class="doc-info">
-              <div class="doc-icon"><i class="fas fa-file-pdf"></i></div>
-              <div class="doc-details">
-                <h4>Project Proposal Report (R26-IT-162)</h4>
-                <p>Comprehensive research proposal document covering literature review, problem formulation, research gap analysis, and system methodology.</p>
-              </div>
-            </div>
-            <div>
-              <a href="docs/Proposal_Report_IT21313998.pdf" target="_blank" class="btn btn-primary"><i class="fas fa-file-pdf"></i> View Proposal (PDF)</a>
-            </div>
+        <!-- Sub-Folder 1.2: Presentation -->
+        <div style="background: #f8fafc; border: 1px dashed #cbd5e1; border-radius: 10px; padding: 18px;">
+          <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 14px;">
+            <i class="fas fa-folder" style="color: #0284c7; font-size: 1.1rem;"></i>
+            <h4 style="margin: 0; font-size: 1.05rem; color: #0f172a;">📂 Sub-Folder: Presentation</h4>
+            <span style="font-size: 0.75rem; color: var(--text-secondary);">(Proposal Slides)</span>
           </div>
 
-          <!-- Project Proposal Brief -->
-          <div class="doc-card" style="margin-bottom: 0;">
-            <div class="doc-info">
-              <div class="doc-icon" style="color: #0284c7;"><i class="fas fa-file-alt"></i></div>
-              <div class="doc-details">
-                <h4>Official Project Registration Brief</h4>
-                <p>Endorsed project brief submitted to SLIIT academic coordinators containing team specialization roles and research scope.</p>
+          <div style="display: flex; flex-direction: column; gap: 12px; padding-left: 10px; border-left: 2px solid #e2e8f0;">
+            <!-- Proposal Presentation -->
+            <div class="doc-card" style="margin-bottom: 0; background: white;">
+              <div class="doc-info">
+                <div class="doc-icon" style="color: #e11d48;"><i class="fas fa-file-powerpoint"></i></div>
+                <div class="doc-details">
+                  <h4>R26-IT-162 — Proposal Presentation Slide Deck</h4>
+                  <p>Official slide deck presented during the Project Proposal Defense (March 2026), detailing project aim, problem statement, research gap, and proposed architecture.</p>
+                </div>
               </div>
-            </div>
-            <div>
-              <a href="docs/Project_Proposal_Brief_R26_IT_162.pdf" target="_blank" class="btn btn-outline" style="background: var(--primary); color: white; border: none;"><i class="fas fa-eye"></i> View Brief (PDF)</a>
-            </div>
-          </div>
-
-          <!-- Project Charter -->
-          <div class="doc-card" style="margin-bottom: 0;">
-            <div class="doc-info">
-              <div class="doc-icon" style="color: #6366f1;"><i class="fas fa-certificate"></i></div>
-              <div class="doc-details">
-                <h4>Project Charter</h4>
-                <p>Formal project charter defining research milestones, deliverables, resource agreements, and supervisor governance structure.</p>
+              <div>
+                <a href="docs/R26-IT-162 - Proposal Presentation.pdf" target="_blank" class="btn btn-outline" style="background: #e11d48; color: white; border: none;"><i class="fas fa-file-pdf"></i> View Presentation (PDF)</a>
               </div>
-            </div>
-            <div>
-              <a href="docs/Project_Charter_R26_IT_162.pdf" target="_blank" class="btn btn-outline" style="background: #6366f1; color: white; border: none;"><i class="fas fa-eye"></i> View Charter (PDF)</a>
             </div>
           </div>
         </div>
@@ -124,29 +178,60 @@
       <!-- ======================================================== -->
       <!-- 2. PROGRESS PRESENTATION - 1 -->
       <!-- ======================================================== -->
-      <div style="margin-bottom: 45px;">
-        <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 20px; border-bottom: 2px solid var(--border); padding-bottom: 10px;">
-          <div style="background: #dcfce7; color: #16a34a; width: 42px; height: 42px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; font-weight: bold;">
-            <i class="fas fa-folder"></i>
+      <div style="margin-bottom: 45px; background: white; border-radius: var(--radius); padding: 24px; box-shadow: var(--shadow); border: 1px solid var(--border);">
+        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px; border-bottom: 2px solid var(--border); padding-bottom: 12px; flex-wrap: wrap; gap: 10px;">
+          <div style="display: flex; align-items: center; gap: 12px;">
+            <div style="background: #dcfce7; color: #16a34a; width: 44px; height: 44px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 1.3rem;">
+              <i class="fas fa-folder-open"></i>
+            </div>
+            <div>
+              <h3 style="color: var(--secondary); margin: 0; font-size: 1.35rem;">2. Progress Presentation - 1</h3>
+              <p style="margin: 0; color: var(--text-secondary); font-size: 0.85rem;">Hardware prototype verification, logbook submission, topic assessment, and candidate declarations.</p>
+            </div>
           </div>
-          <div>
-            <h3 style="color: var(--secondary); margin: 0; font-size: 1.3rem;">2. Progress Presentation - 1</h3>
-            <p style="margin: 0; color: var(--text-secondary); font-size: 0.85rem;">Hardware prototype verification, sensor debouncing circuitry, and research logbook verification.</p>
-          </div>
+          <span class="timeline-badge badge-completed"><i class="fas fa-check-circle"></i> Milestone Completed</span>
         </div>
 
         <div style="display: flex; flex-direction: column; gap: 15px;">
+          <!-- Presentation Document -->
+          <div class="doc-card" style="margin-bottom: 0;">
+            <div class="doc-info">
+              <div class="doc-icon" style="color: #16a34a;"><i class="fas fa-chalkboard-teacher"></i></div>
+              <div class="doc-details">
+                <h4>Progress Presentation - 1 Slide Deck &amp; Prototype Document</h4>
+                <p>Presentation delivered in May 2026. Featured physical demonstration of the ESP32 tipping bucket rainfall sensor, ultrasonic river gauge, sleep-mode power optimization, and GPRS link.</p>
+              </div>
+            </div>
+            <div>
+              <a href="presentations.html" class="btn btn-outline" style="background: #16a34a; color: white; border: none;"><i class="fas fa-chalkboard"></i> View PP1 Details</a>
+            </div>
+          </div>
+
           <!-- Bi-Weekly Logbook -->
           <div class="doc-card" style="margin-bottom: 0;">
             <div class="doc-info">
-              <div class="doc-icon" style="color: #10b981;"><i class="fas fa-clipboard-check"></i></div>
+              <div class="doc-icon" style="color: #059669;"><i class="fas fa-clipboard-check"></i></div>
               <div class="doc-details">
-                <h4>IT4010 Bi-Weekly Research Logbook Copy & Check List</h4>
-                <p>Supervisor consultation minutes, task logs, challenges, mitigations, and progress verification checklist endorsed for PP1.</p>
+                <h4>IT4010 Bi-Weekly Research Logbook &amp; Checklist</h4>
+                <p>Supervisor consultation minutes, bi-weekly milestone logs, technical hurdles, mitigations, and progress verification checklist endorsed for PP1.</p>
               </div>
             </div>
             <div>
               <a href="docs/BiWeekly_Logbook_IT21313998.pdf" target="_blank" class="btn btn-outline" style="background: var(--success); color: white; border: none;"><i class="fas fa-file-pdf"></i> View Logbook (PDF)</a>
+            </div>
+          </div>
+
+          <!-- TAF Document -->
+          <div class="doc-card" style="margin-bottom: 0;">
+            <div class="doc-info">
+              <div class="doc-icon" style="color: #2563eb;"><i class="fas fa-file-word"></i></div>
+              <div class="doc-details">
+                <h4>Topic Assessment Form (TAF Document — Version 2.1)</h4>
+                <p>Official CDAP Topic Assessment Form (TAF) detailing problem scope, individual contributions, technical feasibility, and faculty endorsement.</p>
+              </div>
+            </div>
+            <div>
+              <a href="docs/TafVersion2-1 (1).docx" download class="btn btn-outline" style="background: #2563eb; color: white; border: none;"><i class="fas fa-download"></i> Download TAF (.DOCX)</a>
             </div>
           </div>
 
@@ -156,12 +241,12 @@
               <div class="doc-icon" style="color: #6366f1;"><i class="fas fa-stamp"></i></div>
               <div class="doc-details">
                 <h4>Signed Candidate Research Declaration Forms</h4>
-                <p>Supervisor endorsed ethics and research originality declarations for Rasara S.H.K (IT21313998) & Sankalana U.H.K (IT22236814).</p>
+                <p>Faculty-endorsed research ethics and individual originality declarations for candidates Rasara S.H.K (IT21313998) &amp; Sankalana U.H.K (IT22236814).</p>
               </div>
             </div>
-            <div style="display: flex; gap: 8px;">
-              <a href="docs/Declaration_IT21313998.pdf" target="_blank" class="btn btn-outline" style="background: #6366f1; color: white; border: none; padding: 8px 14px; font-size: 0.85rem;"><i class="fas fa-file-signature"></i> IT21313998</a>
-              <a href="docs/Declaration_IT22236814.pdf" target="_blank" class="btn btn-outline" style="background: #4f46e5; color: white; border: none; padding: 8px 14px; font-size: 0.85rem;"><i class="fas fa-file-signature"></i> IT22236814</a>
+            <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+              <a href="docs/Declaration_IT21313998.pdf" target="_blank" class="btn btn-outline" style="background: #6366f1; color: white; border: none; padding: 8px 14px; font-size: 0.85rem;"><i class="fas fa-file-signature"></i> IT21313998 Declaration</a>
+              <a href="docs/Declaration_IT22236814.pdf" target="_blank" class="btn btn-outline" style="background: #4f46e5; color: white; border: none; padding: 8px 14px; font-size: 0.85rem;"><i class="fas fa-file-signature"></i> IT22236814 Declaration</a>
             </div>
           </div>
         </div>
@@ -170,29 +255,32 @@
       <!-- ======================================================== -->
       <!-- 3. PROGRESS PRESENTATION - 2 -->
       <!-- ======================================================== -->
-      <div style="margin-bottom: 45px;">
-        <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 20px; border-bottom: 2px solid var(--border); padding-bottom: 10px;">
-          <div style="background: #ffedd5; color: #ea580c; width: 42px; height: 42px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; font-weight: bold;">
-            <i class="fas fa-folder"></i>
+      <div style="margin-bottom: 45px; background: white; border-radius: var(--radius); padding: 24px; box-shadow: var(--shadow); border: 1px solid var(--border);">
+        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px; border-bottom: 2px solid var(--border); padding-bottom: 12px; flex-wrap: wrap; gap: 10px;">
+          <div style="display: flex; align-items: center; gap: 12px;">
+            <div style="background: #ffedd5; color: #ea580c; width: 44px; height: 44px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 1.3rem;">
+              <i class="fas fa-folder-open"></i>
+            </div>
+            <div>
+              <h3 style="color: var(--secondary); margin: 0; font-size: 1.35rem;">3. Progress Presentation - 2</h3>
+              <p style="margin: 0; color: var(--text-secondary); font-size: 0.85rem;">50% core implementation defense: Multi-horizon ML rainfall forecasting, Open-Meteo fusion, and DFRS algorithms.</p>
+            </div>
           </div>
-          <div>
-            <h3 style="color: var(--secondary); margin: 0; font-size: 1.3rem;">3. Progress Presentation - 2</h3>
-            <p style="margin: 0; color: var(--text-secondary); font-size: 0.85rem;">50% core implementation defense: LightGBM rainfall forecasts, Open-Meteo fusion, and DFRS algorithms.</p>
-          </div>
+          <span class="timeline-badge badge-completed"><i class="fas fa-check-circle"></i> Milestone Completed</span>
         </div>
 
         <div style="display: flex; flex-direction: column; gap: 15px;">
-          <!-- PP2 Slide Deck -->
+          <!-- PP2 Slide Deck & Document -->
           <div class="doc-card" style="margin-bottom: 0;">
             <div class="doc-info">
               <div class="doc-icon" style="color: #ea580c;"><i class="fas fa-file-powerpoint"></i></div>
               <div class="doc-details">
-                <h4>Progress Presentation - 2 (PP2) Slide Deck</h4>
-                <p>Presentation deck evaluated by panel covering 50% technical implementation, multi-horizon ML predictions, and live API data fusion.</p>
+                <h4>Progress Presentation - 2 (PP2) Presentation &amp; Progress Document</h4>
+                <p>Presentation deck evaluated by examination panel covering 50% technical implementation, multi-horizon ML predictions (LightGBM/XGBoost), live weather API fusion, and risk scoring pipeline.</p>
               </div>
             </div>
             <div>
-              <a href="docs/FloodSense-AI-Intelligent-Flood-Early-Warning pp2.pdf" target="_blank" class="btn btn-outline" style="background: #ea580c; color: white; border: none;"><i class="fas fa-file-pdf"></i> View PP2 Slides (PDF)</a>
+              <a href="docs/FloodSense-AI-Intelligent-Flood-Early-Warning pp2.pdf" target="_blank" class="btn btn-outline" style="background: #ea580c; color: white; border: none;"><i class="fas fa-file-pdf"></i> View PP2 Document (PDF)</a>
             </div>
           </div>
         </div>
@@ -201,15 +289,20 @@
       <!-- ======================================================== -->
       <!-- 4. RESEARCH PAPER -->
       <!-- ======================================================== -->
-      <div style="margin-bottom: 45px;">
-        <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 20px; border-bottom: 2px solid var(--border); padding-bottom: 10px;">
-          <div style="background: #fae8ff; color: #a855f7; width: 42px; height: 42px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; font-weight: bold;">
-            <i class="fas fa-folder"></i>
+      <div style="margin-bottom: 45px; background: white; border-radius: var(--radius); padding: 24px; box-shadow: var(--shadow); border: 1px solid var(--border);">
+        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px; border-bottom: 2px solid var(--border); padding-bottom: 12px; flex-wrap: wrap; gap: 10px;">
+          <div style="display: flex; align-items: center; gap: 12px;">
+            <div style="background: #fae8ff; color: #a855f7; width: 44px; height: 44px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 1.3rem;">
+              <i class="fas fa-folder-open"></i>
+            </div>
+            <div>
+              <h3 style="color: var(--secondary); margin: 0; font-size: 1.35rem;">📂 4. Research Paper</h3>
+              <p style="margin: 0; color: var(--text-secondary); font-size: 0.85rem;">Academic research publication draft formatted according to IEEE conference standards.</p>
+            </div>
           </div>
-          <div>
-            <h3 style="color: var(--secondary); margin: 0; font-size: 1.3rem;">4. Research Paper</h3>
-            <p style="margin: 0; color: var(--text-secondary); font-size: 0.85rem;">Academic research publication draft formatted according to IEEE conference standards.</p>
-          </div>
+          <span style="font-size: 0.85rem; background: #f3e8ff; color: #9333ea; padding: 6px 12px; border-radius: 20px; font-weight: 700; display: inline-flex; align-items: center; gap: 6px;">
+            <i class="fas fa-calendar-check"></i> Due: Oct 23
+          </span>
         </div>
 
         <div style="display: flex; flex-direction: column; gap: 15px;">
@@ -225,7 +318,7 @@
             </div>
             <div>
               <span style="font-size: 0.85rem; background: #f3e8ff; color: #9333ea; padding: 8px 14px; border-radius: 6px; font-weight: 700; display: inline-flex; align-items: center; gap: 6px;">
-                <i class="fas fa-clock"></i> Submission Due: Oct 23
+                <i class="fas fa-clock"></i> Draft Finalized
               </span>
             </div>
           </div>
@@ -235,15 +328,18 @@
       <!-- ======================================================== -->
       <!-- 5. FINAL REPORT & PRESENTATION -->
       <!-- ======================================================== -->
-      <div style="margin-bottom: 45px;">
-        <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 20px; border-bottom: 2px solid var(--border); padding-bottom: 10px;">
-          <div style="background: #e0f2fe; color: #0284c7; width: 42px; height: 42px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; font-weight: bold;">
-            <i class="fas fa-folder"></i>
+      <div style="margin-bottom: 45px; background: white; border-radius: var(--radius); padding: 24px; box-shadow: var(--shadow); border: 2px solid var(--primary);">
+        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px; border-bottom: 2px solid var(--border); padding-bottom: 12px; flex-wrap: wrap; gap: 10px;">
+          <div style="display: flex; align-items: center; gap: 12px;">
+            <div style="background: #e0f2fe; color: #0284c7; width: 44px; height: 44px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 1.3rem;">
+              <i class="fas fa-folder-open"></i>
+            </div>
+            <div>
+              <h3 style="color: var(--secondary); margin: 0; font-size: 1.35rem;">📂 5. Final Report &amp; Presentation</h3>
+              <p style="margin: 0; color: var(--text-secondary); font-size: 0.85rem;">Final research dissertation, comprehensive viva presentation slide deck, and defense preparation handbook.</p>
+            </div>
           </div>
-          <div>
-            <h3 style="color: var(--secondary); margin: 0; font-size: 1.3rem;">5. Final Report &amp; Presentation</h3>
-            <p style="margin: 0; color: var(--text-secondary); font-size: 0.85rem;">Final research thesis, comprehensive viva presentation slide deck, and defense preparation handbook.</p>
-          </div>
+          <span class="timeline-badge badge-completed" style="background: var(--primary);"><i class="fas fa-star"></i> Viva Voce Ready</span>
         </div>
 
         <div style="display: flex; flex-direction: column; gap: 15px;">
@@ -263,20 +359,6 @@
             </div>
           </div>
 
-          <!-- Comprehensive Viva Voce Defense Guide -->
-          <div class="doc-card" style="margin-bottom: 0; background: #f0fdf4; border: 1px solid #bbf7d0;">
-            <div class="doc-info">
-              <div class="doc-icon" style="color: #16a34a; background: white;"><i class="fas fa-user-graduate"></i></div>
-              <div class="doc-details">
-                <h4 style="color: #14532d;">Comprehensive Viva Voce Master Defense Guide &amp; Q&amp;A</h4>
-                <p style="color: #166534;">11-page technical handbook: 1-hour assessment breakdown (10m Pres, 10m Demo, 35m Viva, 5m Mark), spoken presentation script, live demo SOP, and 40+ technical questions &amp; answers.</p>
-              </div>
-            </div>
-            <div>
-              <a href="docs/SLIIT_Viva_Comprehensive_Defense_Guide_IT21313998.pdf" target="_blank" class="btn btn-outline" style="background: #16a34a; color: white; border: none;"><i class="fas fa-file-pdf"></i> View Handbook (PDF)</a>
-            </div>
-          </div>
-
           <!-- Final Dissertation Draft -->
           <div class="doc-card" style="margin-bottom: 0;">
             <div class="doc-info">
@@ -290,6 +372,20 @@
               <span style="font-size: 0.85rem; background: #dcfce7; color: #15803d; padding: 8px 14px; border-radius: 6px; font-weight: 700; display: inline-flex; align-items: center; gap: 6px;">
                 <i class="fas fa-check-circle"></i> Submitted for Viva
               </span>
+            </div>
+          </div>
+
+          <!-- Comprehensive Viva Voce Defense Guide -->
+          <div class="doc-card" style="margin-bottom: 0; background: #f0fdf4; border: 1px solid #bbf7d0;">
+            <div class="doc-info">
+              <div class="doc-icon" style="color: #16a34a; background: white;"><i class="fas fa-user-graduate"></i></div>
+              <div class="doc-details">
+                <h4 style="color: #14532d;">Comprehensive Viva Voce Master Defense Guide &amp; Q&amp;A</h4>
+                <p style="color: #166534;">11-page technical handbook: 1-hour assessment breakdown (10m Pres, 10m Demo, 35m Viva, 5m Mark), spoken presentation script, live demo SOP, and 40+ technical questions &amp; answers.</p>
+              </div>
+            </div>
+            <div>
+              <a href="docs/SLIIT_Viva_Comprehensive_Defense_Guide_IT21313998.pdf" target="_blank" class="btn btn-outline" style="background: #16a34a; color: white; border: none;"><i class="fas fa-file-pdf"></i> View Handbook (PDF)</a>
             </div>
           </div>
         </div>
